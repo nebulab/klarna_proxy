@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Klarna
   class Capture < Client
     def shipping_info(order_id, capture_id, data)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Klarna
   class Order < Client
     def get(order_id)

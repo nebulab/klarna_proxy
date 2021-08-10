@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 module Klarna
   class Credit < Client
-
     def create_session(data)
-      do_request(:post, "/credit/v1/sessions") do |request|
+      do_request(:post, '/credit/v1/sessions') do |request|
         request.body = data.to_json
       end
     end
@@ -18,6 +19,5 @@ module Klarna
         request.body = data.to_json
       end
     end
-
   end
 end

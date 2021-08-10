@@ -1,11 +1,13 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 require 'pry'
 
-$base_dir = File.join(File.expand_path(__dir__), '..')
-$LOAD_PATH.unshift(File.join($base_dir))
-$LOAD_PATH.unshift(File.join($base_dir, 'lib'))
+base_dir = File.join(File.expand_path(__dir__), '..')
+$LOAD_PATH.unshift(File.join(base_dir))
+$LOAD_PATH.unshift(File.join(base_dir, 'lib'))
 
 require 'klarna'
-require 'spec/support/fake_frontend.rb'
+require 'spec/support/fake_frontend'
 
 FakeFrontend.run!

@@ -1,11 +1,13 @@
-require "klarna/version"
-require "klarna/configuration"
-require "klarna/client"
-require "klarna/response"
-require "klarna/order"
-require "klarna/capture"
-require "klarna/credit"
-require "klarna/refund"
+# frozen_string_literal: true
+
+require 'klarna/version'
+require 'klarna/configuration'
+require 'klarna/client'
+require 'klarna/response'
+require 'klarna/order'
+require 'klarna/capture'
+require 'klarna/credit'
+require 'klarna/refund'
 
 module Klarna
   class << self
