@@ -1,6 +1,6 @@
 # Klarna SDK
 
-This is a non-complete implementation of the Klarna Credit and Klarna Order Management API.
+This is a non-complete implementation of the Klarna Payment and Klarna Order Management API.
 
 ## Development
 
