@@ -30,6 +30,7 @@ module Klarna
 
       request.content_type = 'application/json'
       request.basic_auth(@configuration.api_key, @configuration.api_secret)
+
       if @configuration.user_agent
         request['User-Agent'] =
           "Ruby Klarna #{Klarna::VERSION} (#{@configuration.user_agent} Ruby/#{RUBY_VERSION})"
