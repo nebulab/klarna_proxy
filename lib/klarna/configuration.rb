@@ -29,5 +29,9 @@ module Klarna
     def endpoint
       endpoints[zone.to_sym][environment.to_sym]
     end
+
+    private
+
+    attr_reader :endpoints
   end
 end

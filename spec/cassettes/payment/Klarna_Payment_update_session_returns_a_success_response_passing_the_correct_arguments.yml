@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-na.playground.klarna.com/payments/v1/sessions/session_id
+    body:
+      encoding: UTF-8
+      string: '{"locale":"en-US","order_amount":200,"order_lines":[{"name":"Running
+        shoes","quantity":4,"total_amount":200,"unit_price":50}],"purchase_country":"US","purchase_currency":"USD"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization: "<AUTHORIZATION>"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Fri, 13 Aug 2021 15:35:54 GMT
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Klarna-Correlation-Id:
+      - 28074411-0030-49dd-93a7-52ea314b82c4
+      Render-Time:
+      - '3'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Envoy-Upstream-Service-Time:
+      - '12'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Fri, 13 Aug 2021 15:35:53 GMT
+recorded_with: VCR 5.1.0

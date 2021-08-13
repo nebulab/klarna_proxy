@@ -13,7 +13,7 @@ module Klarna
     private
 
     def do_request(type, service)
-      uri = URI.parse(@configuration.endpoint)
+      uri = URI.parse(configuration.endpoint)
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
 
@@ -29,20 +29,24 @@ module Klarna
                 end
 
       request.content_type = 'application/json'
-      request.basic_auth(@configuration.api_key, @configuration.api_secret)
+      request.basic_auth(configuration.api_key, configuration.api_secret)
 
-      if @configuration.user_agent
+      if configuration.user_agent
         request['User-Agent'] =
-          "Ruby Klarna #{Klarna::VERSION} (#{@configuration.user_agent} Ruby/#{RUBY_VERSION})"
+          "Ruby Klarna #{Klarna::VERSION} (#{configuration.user_agent} Ruby/#{RUBY_VERSION})"
       end
 
       yield(request) if block_given?
 
-      http.set_debug_output(@configuration.debugger) if @configuration.debugger
+      http.set_debug_output(configuration.debugger) if configuration.debugger
       response = http.request(request)
-      http.set_debug_output(nil) if @configuration.debugger
+      http.set_debug_output(nil) if configuration.debugger
 
       Klarna::Response.new(response)
     end
+
+    private
+
+    attr_reader :configuration
   end
 end

@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-na.playground.klarna.com/payments/v1/sessions
+    body:
+      encoding: UTF-8
+      string: '{"locale":"en-US","order_amount":100,"order_lines":[{"name":"Running
+        shoes","quantity":4,"total_amount":100,"unit_price":25}],"purchase_country":"US","purchase_currency":"USD"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization: "<AUTHORIZATION>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 Aug 2021 19:35:41 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Vary:
+      - Accept-Encoding
+      Klarna-Correlation-Id:
+      - 0dbb9939-6a65-4330-b713-eafc21537586
+      Render-Time:
+      - '8'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Envoy-Upstream-Service-Time:
+      - '9'
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "session_id" : "eabb7ad3-99ce-372f-1f9d-546087efe4ce",
+          "client_token" : "client_token",
+          "payment_method_categories" : [ {
+            "identifier" : "pay_over_time",
+            "name" : "4 interest-free payments",
+            "asset_urls" : {
+              "descriptive" : "https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg",
+              "standard" : "https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg"
+            }
+          } ]
+        }
+    http_version:
+  recorded_at: Tue, 10 Aug 2021 19:35:41 GMT
+recorded_with: VCR 5.1.0

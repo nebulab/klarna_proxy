@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-na.playground.klarna.com/payments/v1/sessions
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization: "<AUTHORIZATION>"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Tue, 10 Aug 2021 19:35:40 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '168'
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Render-Time:
+      - '0'
+      Klarna-Correlation-Id:
+      - 999ff579-94e0-428c-932b-54421f7454e5
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error_code" : "BAD_VALUE",
+          "error_messages" : [ "Bad value: purchase_country, purchase_currency" ],
+          "correlation_id" : "999ff579-94e0-428c-932b-54421f7454e5"
+        }
+    http_version:
+  recorded_at: Tue, 10 Aug 2021 19:35:40 GMT
+recorded_with: VCR 5.1.0
