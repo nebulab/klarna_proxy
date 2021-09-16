@@ -45,8 +45,6 @@ module Klarna
       Klarna::Response.new(response)
     end
 
-    private
-
     attr_reader :configuration
   end
 end

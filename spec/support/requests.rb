@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 PAYMENT_CREATE_SESSION = {
   locale: 'en-US',
   order_amount: 100,
@@ -11,7 +13,7 @@ PAYMENT_CREATE_SESSION = {
   ],
   purchase_country: 'US',
   purchase_currency: 'USD'
-}
+}.freeze
 
 PAYMENT_UPDATE_SESSION = {
   locale: 'en-US',
@@ -26,5 +28,4 @@ PAYMENT_UPDATE_SESSION = {
   ],
   purchase_country: 'US',
   purchase_currency: 'USD'
-}
-
+}.freeze

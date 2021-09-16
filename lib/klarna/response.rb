@@ -23,20 +23,20 @@ module Klarna
       http_response.send('[]', index)
     end
 
-    def method_missing(m, *args, &block)
-      return @body[m.to_s] if has_body_field(m)
+    def method_missing(method, *args, &block)
+      return @body[method.to_s] if body_field?(method)
 
       super
     end
 
-    def respond_to?(m, *args, &block)
-      return true if has_body_field(m)
+    def respond_to_missing?(method, *args, &block)
+      return true if body_field?(method)
 
       super
     end
 
     def error_code
-      return @body['error_code'] if has_body_field('error_code')
+      return @body['error_code'] if body_field?('error_code')
 
       @code.to_s
     end
@@ -56,7 +56,7 @@ module Klarna
       end
     end
 
-    def has_body_field(field)
+    def body_field?(field)
       @body.is_a?(Hash) && @body.key?(field.to_s)
     end
   end
