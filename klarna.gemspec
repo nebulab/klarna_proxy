@@ -22,11 +22,13 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.5'
 
   spec.add_development_dependency 'bundler', '~> 2.2.22'
+  spec.add_development_dependency 'codecov', '~> 0.5.2'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'relaxed-rubocop', '~> 2.5'
   spec.add_development_dependency 'rspec', '~> 3.9'
   spec.add_development_dependency 'rspec_junit_formatter', '~> 0.4.1'
   spec.add_development_dependency 'rubocop', '~> 1.18', '>= 1.18.4'
+  spec.add_development_dependency 'simplecov', '~> 0.21.2'
   spec.add_development_dependency 'sinatra-contrib'
   spec.add_development_dependency 'thin'
   spec.add_development_dependency 'vcr', '~> 5.1'
