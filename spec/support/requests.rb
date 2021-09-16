@@ -29,3 +29,22 @@ PAYMENT_UPDATE_SESSION = {
   purchase_country: 'US',
   purchase_currency: 'USD'
 }.freeze
+
+CUSTOMER_TOKEN_SESSION = {
+  locale: 'en-US',
+  intended_use: 'subscription',
+  purchase_country: 'US',
+  purchase_currency: 'USD',
+  description: 'description',
+  billing_address: {
+    given_name: 'John',
+    family_name: 'Doe',
+    email: 'admin@example.com',
+    phone: '12025550170',
+    street_address: '8125 Centre St',
+    postal_code: '36522-2156',
+    city: 'Citronelle',
+    country: 'US',
+    region: 'AL'
+  },
+}.freeze
