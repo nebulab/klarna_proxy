@@ -22,13 +22,6 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.2'
 
   spec.add_development_dependency 'bundler', '~> 2.2.22'
-  spec.add_development_dependency 'capybara'
-  spec.add_development_dependency 'capybara-screenshot'
-  spec.add_development_dependency 'httplog'
-  spec.add_development_dependency 'json'
-  spec.add_development_dependency 'poltergeist'
-  spec.add_development_dependency 'pry'
-  spec.add_development_dependency 'pry-doc'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.9'
   spec.add_development_dependency 'rspec_junit_formatter', '~> 0.4.1'
