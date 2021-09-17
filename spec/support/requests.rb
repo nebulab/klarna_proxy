@@ -48,3 +48,12 @@ CUSTOMER_TOKEN_SESSION = {
     region: 'AL'
   },
 }.freeze
+
+ORDER_CAPTURE = {
+  captured_amount: 50,
+  shipping_info: [{
+    shipping_company: "company",
+    tracking_number: 1245,
+    tracking_url: "tracking.com"
+  }]
+}.freeze

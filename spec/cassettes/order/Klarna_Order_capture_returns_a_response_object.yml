@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-na.playground.klarna.com/ordermanagement/v1/orders/f5b2b1b3-4d70-39a7-8d30-86470631eee3/captures
+    body:
+      encoding: UTF-8
+      string: '{"captured_amount":50,"shipping_info":[{"shipping_company":"company","tracking_number":1245,"tracking_url":"tracking.com"}]}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization: "<AUTHORIZATION>"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 17 Sep 2021 10:03:36 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Location:
+      - https://api-na.playground.klarna.com/ordermanagement/v1/orders/f5b2b1b3-4d70-39a7-8d30-86470631eee3/captures/d157b93a-bebf-491c-99e7-a99b0f2b60c2
+      Transaction-Id:
+      - 4b44ce7f-3e6e-4a51-bb46-a847b99b2934
+      Capture-Id:
+      - d157b93a-bebf-491c-99e7-a99b0f2b60c2
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Klarna-Correlation-Id:
+      - 885219b7-362c-4b0a-86c5-3f720009afa2
+      X-Envoy-Upstream-Service-Time:
+      - '26'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Fri, 17 Sep 2021 10:03:36 GMT
+recorded_with: VCR 5.1.0

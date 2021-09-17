@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-na.playground.klarna.com/ordermanagement/v1/orders/eab63d8c-e5d9-393e-bf8e-9dcd968d1332
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization: "<AUTHORIZATION>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Sep 2021 09:20:11 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Klarna-Correlation-Id:
+      - 31a84608-b631-43a7-8486-43871c4e8820
+      X-Envoy-Upstream-Service-Time:
+      - '33'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: ASCII-8BIT
+      string: '{"order_id":"eab63d8c-e5d9-393e-bf8e-9dcd968d1332","status":"AUTHORIZED","fraud_status":"ACCEPTED","order_amount":2749,"original_order_amount":2749,"captured_amount":0,"refunded_amount":0,"remaining_authorized_amount":2749,"purchase_currency":"USD","locale":"en-US","order_lines":[{"reference":"SOL-LS03","type":"physical","quantity":1,"quantity_unit":"","name":"Solidus
+        Long Sleeve","total_amount":1999,"unit_price":1999,"total_discount_amount":0,"tax_rate":0,"total_tax_amount":0,"product_url":"http://example.com/products/22","image_url":"http://localhost:5000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV0pwTkdOME1XTmxaM0J2TTJkeFozSXdNelYyYzJSck16ZHdZd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OdmJHbGtkWE5mYkc5dVoxOWliSFZsTG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jMjlzYVdSMWMxOXNiMjVuWDJKc2RXVXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJT2FXMWhaMlV2Y0c1bkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDktMDdUMTA6MDg6NTIuODk0WiIsInB1ciI6ImJsb2Jfa2V5In19--a0ac2a520851ad62dcf8b40fdf525a61a69810d7/solidus_long_blue.png"},{"reference":"H04123346827","type":"shipping_fee","quantity":1,"quantity_unit":"","name":"UPS
+        Ground (USD)","total_amount":500,"unit_price":500,"total_discount_amount":0,"tax_rate":0,"total_tax_amount":0},{"reference":"Sales
+        Tax","type":"sales_tax","quantity":1,"quantity_unit":"","name":"Sales Tax","total_amount":250,"unit_price":250,"total_discount_amount":0,"tax_rate":0,"total_tax_amount":0}],"merchant_reference1":"R271805305","klarna_reference":"T39KSLNB","customer":{"date_of_birth":"1977-12-11","type":"person"},"billing_address":{"given_name":"asfdasf","family_name":"asdfasdfasdfasd","title":"","street_address":"Rardin
+        Drive","street_address2":"3306","postal_code":"94306","city":"Palo Alto","region":"CA","country":"US","email":"asdfdsafadsf@df.com","phone":"+12025550170"},"shipping_address":{"given_name":"John","family_name":"Doe","title":"","street_address":"8125
+        Centre St","street_address2":"","postal_code":"36522-2156","city":"Citronelle","region":"AL","country":"US","email":"admin@example.com","phone":"12025550170"},"created_at":"2021-09-07T10:03:53.497Z","purchase_country":"US","expires_at":"2021-10-05T00:00:00.000Z","captures":[],"refunds":[],"initial_payment_method":{"type":"FIXED_AMOUNT_BY_CARD","description":"Slice
+        it (Fixed Payments by Card)","number_of_installments":4}}'
+    http_version:
+  recorded_at: Fri, 17 Sep 2021 09:20:11 GMT
+recorded_with: VCR 5.1.0
