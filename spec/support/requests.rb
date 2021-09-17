@@ -57,3 +57,9 @@ ORDER_CAPTURE = {
     tracking_url: "tracking.com"
   }]
 }.freeze
+
+ORDER_REFUND = {
+  refunded_amount: 5,
+  description: "description",
+  reference: "reference"
+}.freeze
