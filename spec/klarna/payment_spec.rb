@@ -45,6 +45,19 @@ RSpec.describe Klarna::Payment do
 
     it 'returns a response object' do
       expect(subject.call(CUSTOMER_TOKEN_SESSION))
+    end
+
+    it 'returns a success response passing the correct arguments' do
+      response = subject.call(CUSTOMER_TOKEN_SESSION)
+      expect(response.success?).to be_truthy
+    end
+  end
+
+  describe '#place_order' do
+    subject { ->(params) { Klarna.client(:payment).place_order('5ab38828-3664-3246-9785-31d37f75978c', params) } }
+
+    it 'returns a response object' do
+      expect(subject.call(PLACE_ORDER_PARAMS))
         .to be_an_instance_of(Klarna::Response)
     end
 
@@ -53,7 +66,7 @@ RSpec.describe Klarna::Payment do
     end
 
     it 'returns a success response passing the correct arguments' do
-      response = subject.call(CUSTOMER_TOKEN_SESSION)
+      response = subject.call(PLACE_ORDER_PARAMS)
       expect(response.success?).to be_truthy
     end
   end

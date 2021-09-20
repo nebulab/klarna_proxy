@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-na.playground.klarna.com/payments/v1/authorizations/5ab38828-3664-3246-9785-31d37f75978c/order
+    body:
+      encoding: UTF-8
+      string: '{"acquiring_channel":"ecommerce","attachment":{"body":"{\"customer_account_info\":[{\"unique_account_identifier\":\"test@gmail.com\",\"account_registration_date\":\"2017-02-13T10:49:20Z\",\"account_last_modified\":\"2019-03-13T11:45:27Z\"}]}","content_type":"application/vnd.klarna.internal.emd-v2+json"},"authorization_token":"cfbb0ccf-61b4-3ebc-addb-bfbd5ab5e4c2","auto_capture":false,"billing_address":{"city":"Hometown","country":"US","email":"jordy@gmail.com","family_name":"Doe","given_name":"John","phone":"12345678","postal_code":"12345","region":"CA","street_address":"Main
+        Street"},"client_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJzZXNzaW9uX2lkIiA6ICIw","custom_payment_method_ids":["string"],"customer":{"date_of_birth":"1978-12-31","gender":"male","last_four_ssn":"1234","national_identification_number":"string","organization_entity_type":"LIMITED_COMPANY","organization_registration_id":"string","title":"Mr.","type":"organization","vat_id":"string"},"design":"string","expires_at":"2038-01-19T03:14:07.000Z","locale":"en-GB","merchant_data":"{\"order_speicif\":[{\"substore\":\"Women''s
+        Fashion\",\"product_name\":\"Women Sweatshirt\"}]}","merchant_reference1":"ON4711","merchant_reference2":"hdt53h-zdgg6-hdaff2","merchant_urls":{"confirmation":"https://...","notification":"https://...","push":"https://..."},"options":{"color_border":"#FF9900","color_border_selected":"#FF9900","color_details":"#FF9900","color_text":"#FF9900","radius_border":"5px"},"order_amount":3674,"order_lines":[{"name":"Running
+        shoe","quantity":1,"total_amount":2999,"unit_price":2999,"type":"physical"},{"name":"shipping","quantity":1,"total_amount":500,"unit_price":500,"type":"shipping_fee"},{"name":"taxes","quantity":1,"total_amount":175,"unit_price":175,"type":"sales_tax"}],"payment_method_categories":[{"asset_urls":{"descriptive":"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg","standard":"https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg"},"identifier":"pay_later","name":"Pay
+        Later"}],"purchase_country":"GB","purchase_currency":"USD","shipping_address":{"city":"Hometown","country":"US","email":"jordy@gmail.com","family_name":"Doe","given_name":"John","phone":"12345678","postal_code":"12345","region":"CA","street_address":"Main
+        Street"},"status":"complete"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization: "<AUTHORIZATION>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 20 Sep 2021 14:29:14 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Vary:
+      - Accept-Encoding
+      Klarna-Correlation-Id:
+      - c9b06882-c856-4cff-8892-468d898925a1
+      Render-Time:
+      - '5'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Envoy-Upstream-Service-Time:
+      - '6'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "order_id" : "25b8d321-bae8-3251-9c49-5422ade735c0",
+          "redirect_url" : "https://js.playground.klarna.com/na/kp/v1/sessions/f1bcc2af-7f5b-3757-a538-46ea80e5b5de/redirect",
+          "fraud_status" : "ACCEPTED",
+          "authorized_payment_method" : {
+            "type" : "slice_it_by_card"
+          }
+        }
+    http_version:
+  recorded_at: Mon, 20 Sep 2021 14:29:14 GMT
+recorded_with: VCR 5.1.0

@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-na.playground.klarna.com/payments/v1/authorizations/5ab38828-3664-3246-9785-31d37f75978c/order
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization: "<AUTHORIZATION>"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 20 Sep 2021 14:29:13 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '195'
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Klarna-Correlation-Id:
+      - caad27da-a68f-4644-b319-8b505343f809
+      Render-Time:
+      - '3'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Envoy-Upstream-Service-Time:
+      - '3'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error_code" : "BAD_VALUE",
+          "error_messages" : [ "Bad value: purchase_country, order_amount, order_lines, purchase_currency" ],
+          "correlation_id" : "caad27da-a68f-4644-b319-8b505343f809"
+        }
+    http_version:
+  recorded_at: Mon, 20 Sep 2021 14:29:13 GMT
+recorded_with: VCR 5.1.0

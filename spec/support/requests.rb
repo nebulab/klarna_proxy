@@ -75,3 +75,105 @@ CAPTURE_SHIPPING_INFO = {
     return_tracking_uri: "http://shipping.example/findmypackage?93456415674545679888"
   }]
 }.freeze
+
+PLACE_ORDER_PARAMS = {
+  acquiring_channel: "ecommerce",
+  attachment: {
+    body: "{\"customer_account_info\":[{\"unique_account_identifier\":\"test@gmail.com\",\"account_registration_date\":\"2017-02-13T10:49:20Z\",\"account_last_modified\":\"2019-03-13T11:45:27Z\"}]}",
+    content_type: "application/vnd.klarna.internal.emd-v2+json"
+  },
+  authorization_token: "cfbb0ccf-61b4-3ebc-addb-bfbd5ab5e4c2",
+  auto_capture: false,
+  billing_address: {
+    city: "Hometown",
+    country: "US",
+    email: "jordy@gmail.com",
+    family_name: "Doe",
+    given_name: "John",
+    phone: "12345678",
+    postal_code: "12345",
+    region: "CA",
+    street_address: "Main Street",
+  },
+  client_token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJzZXNzaW9uX2lkIiA6ICIw",
+  custom_payment_method_ids: [
+    "string"
+  ],
+  customer: {
+    date_of_birth: "1978-12-31",
+    gender: "male",
+    last_four_ssn: "1234",
+    national_identification_number: "string",
+    organization_entity_type: "LIMITED_COMPANY",
+    organization_registration_id: "string",
+    title: "Mr.",
+    type: "organization",
+    vat_id: "string"
+  },
+  design: "string",
+  expires_at: "2038-01-19T03:14:07.000Z",
+  locale: "en-GB",
+  merchant_data: "{\"order_speicif\":[{\"substore\":\"Women's Fashion\",\"product_name\":\"Women Sweatshirt\"}]}",
+  merchant_reference1: "ON4711",
+  merchant_reference2: "hdt53h-zdgg6-hdaff2",
+  merchant_urls: {
+    confirmation: "https://...",
+    notification: "https://...",
+    push: "https://..."
+  },
+  options: {
+    color_border: "#FF9900",
+    color_border_selected: "#FF9900",
+    color_details: "#FF9900",
+    color_text: "#FF9900",
+    radius_border: "5px"
+  },
+  order_amount: 3674,
+  order_lines: [
+    {
+      name: "Running shoe",
+      quantity: 1,
+      total_amount: 2999,
+      unit_price: 2999,
+      type: "physical"
+    },
+    {
+      name: "shipping",
+      quantity: 1,
+      total_amount: 500,
+      unit_price: 500,
+      type: "shipping_fee"
+    },
+    {
+      name: "taxes",
+      quantity: 1,
+      total_amount: 175,
+      unit_price: 175,
+      type: "sales_tax"
+    }
+  ],
+  payment_method_categories: [
+    {
+      asset_urls: {
+        descriptive: "https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg",
+        standard: "https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg"
+      },
+      identifier: "pay_later",
+      name: "Pay Later"
+    }
+  ],
+  purchase_country: "GB",
+  purchase_currency: "USD",
+  shipping_address: {
+    city: "Hometown",
+    country: "US",
+    email: "jordy@gmail.com",
+    family_name: "Doe",
+    given_name: "John",
+    phone: "12345678",
+    postal_code: "12345",
+    region: "CA",
+    street_address: "Main Street",
+  },
+  status: "complete"
+}.freeze
