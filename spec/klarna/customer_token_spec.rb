@@ -22,4 +22,29 @@ RSpec.describe Klarna::CustomerToken do
       expect(response.body).to include('order_id')
     end
   end
+
+  describe '#get' do
+    subject { ->(customer_token) { Klarna.client(:customer_token).get(customer_token) } }
+
+    it 'returns a response object' do
+      response = subject.call('91532188-4b48-4fe7-b075-16b95da53da9')
+      expect(response.success?).to be_truthy
+      expect(response).to be_an_instance_of(Klarna::Response)
+    end
+
+    it 'returns an error response passing the wrong arguments' do
+      expect(subject.call('unknown-token').success?)
+        .to be_falsey
+    end
+
+    it 'returns a success response passing the correct arguments' do
+      response = subject.call('91532188-4b48-4fe7-b075-16b95da53da9')
+      expect(response.body['status']).to eq('ACTIVE')
+    end
+
+    it 'returns a success response with a wrong status if the token was cancelled' do
+      response = subject.call('91532188-4b48-4fe7-b075-16b95da53da9')
+      expect(response.body['status']).to eq('CANCELLED')
+    end
+  end
 end

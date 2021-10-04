@@ -7,5 +7,9 @@ module Klarna
         request.body = data.to_json
       end
     end
+
+    def get(customer_token)
+      do_request(:get, "/customer-token/v1/tokens/#{customer_token}")
+    end
   end
 end
