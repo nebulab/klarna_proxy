@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-na.playground.klarna.com/payments/v1/authorizations/3fbd1fac-a764-3851-b35e-3a58a7aa52be/customer-token
+    body:
+      encoding: UTF-8
+      string: '{"locale":"en-US","intended_use":"subscription","purchase_country":"US","purchase_currency":"USD","description":"description","billing_address":{"given_name":"John","family_name":"Doe","email":"admin@example.com","phone":"12025550170","street_address":"8125
+        Centre St","postal_code":"36522-2156","city":"Citronelle","country":"US","region":"AL"}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization: "<AUTHORIZATION>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Sep 2021 08:54:36 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Vary:
+      - Accept-Encoding
+      Klarna-Correlation-Id:
+      - 1dd610b3-25af-46d1-acbf-ddd6f2cd1ce1
+      Render-Time:
+      - '347'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Envoy-Upstream-Service-Time:
+      - '347'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "token_id" : "9df8f940-41b7-4774-b164-a8cf255c91ba",
+          "redirect_url" : "https://js.playground.klarna.com/na/kp/v1/sessions/16b64371-5b6b-33cf-b810-1c66f64f5dcf/redirect",
+          "billing_address" : {
+            "given_name" : "asfdasf",
+            "family_name" : "asdfasdfasdfasd",
+            "email" : "asdfdsafadsf@df.com",
+            "street_address" : "Rardin Drive",
+            "street_address2" : "3306",
+            "postal_code" : "94306",
+            "city" : "Palo Alto",
+            "region" : "CA",
+            "phone" : "+12025550170",
+            "country" : "US"
+          },
+          "customer" : {
+            "date_of_birth" : "1977-12-11"
+          }
+        }
+    http_version:
+  recorded_at: Fri, 17 Sep 2021 08:54:36 GMT
+recorded_with: VCR 5.1.0
