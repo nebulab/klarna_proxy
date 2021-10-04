@@ -20,6 +20,8 @@ module Klarna
       request = case type
                 when :post
                   Net::HTTP::Post.new(service)
+                when :patch
+                  Net::HTTP::Patch.new(service)
                 when :delete
                   Net::HTTP::Delete.new(service)
                 when :get
