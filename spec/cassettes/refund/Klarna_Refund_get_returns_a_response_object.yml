@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-na.playground.klarna.com/ordermanagement/v1/orders/62b809e8-b8c9-3be7-be36-80513716e7c0/refunds/c0cd23c3-64b9-4a49-baad-f680a038e820
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization: "<AUTHORIZATION>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Sep 2021 13:27:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Klarna-Correlation-Id:
+      - ff96beaa-c05e-4cce-93ac-bf6540270c58
+      X-Envoy-Upstream-Service-Time:
+      - '37'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: ASCII-8BIT
+      string: '{"refund_id":"c0cd23c3-64b9-4a49-baad-f680a038e820","refunded_amount":5,"refunded_at":"2021-09-17T13:10:53.702Z","description":"description","order_lines":[],"credit_invoice":false}'
+    http_version:
+  recorded_at: Fri, 17 Sep 2021 13:27:49 GMT
+recorded_with: VCR 5.1.0

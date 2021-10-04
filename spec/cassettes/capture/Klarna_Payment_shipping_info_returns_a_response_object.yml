@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-na.playground.klarna.com/ordermanagement/v1/orders/f5b2b1b3-4d70-39a7-8d30-86470631eee3/captures/d157b93a-bebf-491c-99e7-a99b0f2b60c2/shipping-info
+    body:
+      encoding: UTF-8
+      string: '{"shipping_info":[{"shipping_company":"DHL US","shipping_method":"Home","tracking_number":"63456415674545679874","tracking_uri":"http://shipping.example/findmypackage?63456415674545679874","return_shipping_company":"DHL
+        US","return_tracking_number":"93456415674545679888","return_tracking_uri":"http://shipping.example/findmypackage?93456415674545679888"}]}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization: "<AUTHORIZATION>"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Fri, 17 Sep 2021 13:41:15 GMT
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Transaction-Id:
+      - b9c16bb7-ec5b-4c3e-9916-5a006479d063
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Klarna-Correlation-Id:
+      - 9963436c-5b20-4aa6-913c-953ac525b183
+      X-Envoy-Upstream-Service-Time:
+      - '117'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Fri, 17 Sep 2021 13:41:14 GMT
+recorded_with: VCR 5.1.0
