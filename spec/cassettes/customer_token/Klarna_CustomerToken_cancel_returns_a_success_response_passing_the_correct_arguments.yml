@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://api-na.playground.klarna.com/customer-token/v1/tokens/7c54933f-e9f1-458c-8702-fe5b56b127ec/status
+    body:
+      encoding: UTF-8
+      string: '{"status":"CANCELLED"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization: "<AUTHORIZATION>"
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Date:
+      - Mon, 04 Oct 2021 15:29:45 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Klarna-Correlation-Id:
+      - f84a52ec-7f3c-4061-9467-ede6b1b21272
+      Render-Time:
+      - '99'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Envoy-Upstream-Service-Time:
+      - '111'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Mon, 04 Oct 2021 15:29:45 GMT
+recorded_with: VCR 5.1.0
