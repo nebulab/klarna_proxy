@@ -5,13 +5,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'klarna/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'klarna_client'
+  spec.name          = 'klarna_proxy'
   spec.version       = Klarna::VERSION
-  spec.authors       = ['Jose Antonio Pio Gil', 'Pascal Jungblut']
-  spec.email         = ['jose.pio@bitspire.de', 'pascal.jungblut@bitspire.de']
+  spec.authors       = ['Andrea Vassallo']
+  spec.email         = ['andrea.vassallo.94@gmail.com']
 
-  spec.summary       = 'Klarna Ruby Client'
-  spec.description   = 'Provides a Ruby interface to the current Klarna API'
+  spec.summary       = 'Klarna Ruby Proxy'
+  spec.description   = 'Provides a Ruby interface to the current Klarna API, forked and inspired by https://rubygems.org/gems/klarna_client/versions/0.1.0'
   spec.homepage      = ''
   spec.license       = 'Apache-2.0'
 
